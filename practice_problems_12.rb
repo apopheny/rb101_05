@@ -6,3 +6,23 @@
 
 arr = [[:a, 1], ['b', 'two'], ['sea', {c: 3}], [{a: 1, b: 2, c: 3, d: 4}, 'D']]
 
+# arr.each_with_object([]) do |arr, out|
+# end
+
+hsh = Hash.new
+
+loop do
+  if arr.empty? 
+    break
+  elsif
+    temp = arr.shift
+    hsh[temp[0]] = temp[1]
+  end
+  hsh
+end
+
+# alternately:
+
+arr.each do |arr|
+  hsh[arr[0]] = arr[1]
+end
